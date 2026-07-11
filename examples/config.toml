@@ -1,0 +1,22 @@
+# ~/.codex/config.toml 模板
+# 桌面版 Codex 用 openai_base_url 路由，不读顶层 base_url
+
+model = "gpt-5.4"
+
+# 桌面版 Codex 会忽略这行，但保留无害
+base_url = "https://api.lanbuff.top/v1"
+
+# ← 关键：把内置 openai provider 指向你的第三方供应商
+# 注意：不要带 /responses 后缀，Codex 会自动补路径
+openai_base_url = "https://api.lanbuff.top/v1"
+
+# ===== 可选：自定义 provider 块（多数情况不需要）=====
+# 仅当用 <provider>/<model> 显式模型名、且该模型不在 OpenAI 目录中时才生效。
+# 注意：内置 openai provider 不可用 [model_providers.openai] 覆盖，会报错。
+# [model_providers.lanbuff]
+# name = "lanbuff"
+# base_url = "https://api.lanbuff.top/v1"
+# wire_api = "responses"
+# env_key = "CODEX_THIRDPARTY_API_KEY"
+# requires_openai_auth = false
+# supports_websockets = false
