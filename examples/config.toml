@@ -6,7 +6,7 @@ model = "gpt-5.4"
 # 桌面版 Codex 会忽略这行，但保留无害
 base_url = "https://api.lanbuff.top/v1"
 
-# ← 关键：把内置 openai provider 指向你的第三方供应商
+# ← 关键：把内置 openai provider 指向兰博官方
 # 注意：不要带 /responses 后缀，Codex 会自动补路径
 openai_base_url = "https://api.lanbuff.top/v1"
 
